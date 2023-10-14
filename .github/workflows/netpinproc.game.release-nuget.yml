@@ -1,0 +1,27 @@
+name: netpinproc.release
+on:
+  push:
+    branches: [ main ]  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+        VERSION: 1.0.1
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}        
+        NUGETAPIKEY: --api-key ${{ secrets.GITHUB_TOKEN }} --source github
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+            dotnet-version: 7.0.x
+      - name: Add Nuget FlippingFlips Source
+        run: dotnet nuget add source --username USERNAME --password ${GITHUB_TOKEN} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/FlippingFlips/index.json"      
+      # dotnet nuget pack projects
+      - name: Dotnet Pack - Nuget
+        run: |
+            dotnet pack -c Release
+            dir
+      # dotnet nuget push packages
+      - name: Nuget_NetPinProc
+        run: dotnet nuget push "src/.nuget/NetPinProc.Game.${VERSION}.nupkg" ${NUGETAPIKEY}

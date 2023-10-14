@@ -1,0 +1,140 @@
+{
+  /**
+   * This is the configuration for the entire game
+   */
+  "PRGame": {
+    /**
+	 * Comments about machineType
+	 */
+    "MachineType": "PDB",
+
+    /**
+	 * Comments about numBalls
+	 */
+    "numBalls": 4,
+
+    /**
+	 * Comments about displaymonitor
+	 */
+    "displayMonitor": true
+  },
+  "PRFlippers": [
+    "flipperLwR",
+    "flipperLwL"
+  ],
+  "PRFlipperLeft": [
+    "flipperLwL",
+    "flipperUpL"
+  ],
+  "PRFlipperRight": [
+    "flipperLwR"
+  ],
+  "PRBumpers": [
+    "leftSlingshot",
+    "rightSlingshot",
+    "leftJet",
+    "rightJet",
+    "bottomJet"
+  ],
+  "PRSwitches": [
+    {
+      "Name": "trough0",
+      "Number": "0"
+    },
+    {
+      "Name": "trough1",
+      "Number": "1"
+    },
+    {
+      "Name": "testswitch",
+      "Number": "40"
+    }
+  ],
+  "PRLamps": [
+    {
+      "Name": "lamp1",
+      "Number": "L1"
+    },
+    {
+      "Name": "lamp2",
+      "Number": "L2"
+    }
+  ],
+  "PRCoils": [
+    {
+      "Name": "flipperLwRMain",
+      "Number": "A0-B0-0"
+    },
+    {
+      "Name": "flipperLwRHold",
+      "Number": "A0-B0-1"
+    },
+    {
+      "Name": "flipperLwLMain",
+      "Number": "A0-B0-2"
+    },
+    {
+      "Name": "flipperLwLHold",
+      "Number": "A0-B0-3"
+    },
+    {
+      "Name": "trough",
+      "Number": "A0-B0-4",
+      "Tags": "trough"
+    },
+    {
+      "Name": "slingL",
+      "Number": "A0-B0-5"
+    },
+    {
+      "Name": "slingR",
+      "Number": "A0-B0-6"
+    },
+    {
+      "Name": "bumper1",
+      "Number": "A0-B0-7"
+    },
+    {
+      "Name": "bumper2",
+      "Number": "A0-B0-8"
+    },
+    {
+      "Name": "bumper3",
+      "Number": "A0-B0-9"
+    }
+  ],
+  "PRLeds": [
+    {
+      "Name": "TestLED",
+      "Number": "A0-R12-G13-B14"
+    }
+  ],
+  "PRGI": [
+  ],
+  "PRBallSave": {
+    "PulseCoils": [
+      "leftSlingshot",
+      "rightSlingshot",
+      "leftJet",
+      "rightJet",
+      "bottomJet",
+      "eject",
+      "topPopper",
+      "bottomPopper"
+    ],
+    "ResetSwitches": {
+      "leftSlingshot": "open",
+      "rightSlingshot": "open",
+      "leftJet": "open",
+      "rightJet": "open",
+      "bottomJet": "open",
+      "leftOutlane": "open",
+      "leftInlane": "open"
+    },
+    "StopSwitches": {
+      "shooterLane": "closed",
+      "flipperLwL": "closed",
+      "flipperLwR": "closed"
+    }
+  }
+}

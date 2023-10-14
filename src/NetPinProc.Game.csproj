@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<VersionSuffix>1.0.1</VersionSuffix>
+		<Description>GameController and Default Modes</Description>
+		<Authors>Adam Preble, Jimmy Lipham, David Horsefield</Authors>			
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+		<TargetFramework>netstandard2.0</TargetFramework>		
+		<PackageVersion>$(VersionSuffix)</PackageVersion>
+		<AssemblyVersion>$(VersionSuffix)</AssemblyVersion>
+		<FileVersion>$(VersionSuffix)</FileVersion>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+		<IncludeSource>True</IncludeSource>
+		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<IncludeSource>True</IncludeSource>
+		<PackageIcon>pinball.png</PackageIcon>
+		<PackageOutputPath>.nuget</PackageOutputPath>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="NetPinProc" Version="1.0.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="../pinball.png" Pack="true" PackagePath="\" />
+		<None Include="../README.md" Pack="true" PackagePath="\" />
+		<None Include="../LICENSE.md" Pack="true" PackagePath="\" />
+		<None Include="../.github/workflows/netpinproc.game.release-nuget.yml" Pack="true" PackagePath="\" />
+	</ItemGroup>
+
+</Project>
