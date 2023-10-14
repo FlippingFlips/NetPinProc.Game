@@ -6,7 +6,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-        VERSION: 1.0.1
+        VERSION: 1.0.2
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}        
         NUGETAPIKEY: --api-key ${{ secrets.GITHUB_TOKEN }} --source github
     steps:
