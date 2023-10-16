@@ -1,0 +1,18 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+	<!--WHAT THIS IS "SUPPOSED" TO DO IS COPY PINPROC LIBS FROM THE PACKAGE TO WHATEVER PROJECT IS USING THE PACKAGE-->
+	<!--THE CSPROJ SHOULD PACK THE X86 AND X64 LIBS INTO THE NUGET `CONTENT\LIB\X86`-->
+	<!--<ItemGroup>
+		<Files Include="$(MSBuildThisFileDirectory)/../lib/*.*" />
+	</ItemGroup>
+	<Target Name="CopyFiles" AfterTargets="Build">
+		<Copy SourceFiles="@(Files)" DestinationFolder="$(TargetDir)lib/%(RecursiveDir)" />
+	</Target>-->
+
+	<!--<ItemGroup>
+		<Files Include="$(MSBuildThisFileDirectory)/../contentFiles/lib/**/*.*" />
+	</ItemGroup>
+	<Target Name="CopyFiles" AfterTargets="Build">
+		<Copy SourceFiles="@(Files)" DestinationFolder="$(TargetDir)/lib/%(RecursiveDir)" />
+	</Target>-->
+</Project>

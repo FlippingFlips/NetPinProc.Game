@@ -1,37 +1,44 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFramework>netstandard2.0</TargetFramework>
-		<VersionSuffix>1.0.2</VersionSuffix>
+		<TargetFrameworks>net6.0;net7.0</TargetFrameworks>
+		<VersionSuffix>1.0.5</VersionSuffix>
 		<Description>GameController and Default Modes</Description>
-		<Authors>Adam Preble, Jimmy Lipham, David Horsefield</Authors>			
-		<PackageReadmeFile>README.md</PackageReadmeFile>
-		<PackageLicenseFile>LICENSE.md</PackageLicenseFile>
-		<TargetFramework>netstandard2.0</TargetFramework>		
+		<Authors>Adam Preble, Jimmy Lipham, David Horsefield</Authors>				
 		<PackageVersion>$(VersionSuffix)</PackageVersion>
 		<AssemblyVersion>$(VersionSuffix)</AssemblyVersion>
 		<FileVersion>$(VersionSuffix)</FileVersion>
-		<GenerateDocumentationFile>true</GenerateDocumentationFile>
-		<IncludeSymbols>true</IncludeSymbols>
-		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
 		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-		<IncludeSource>True</IncludeSource>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
 		<IncludeSymbols>true</IncludeSymbols>
-		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
 		<IncludeSource>True</IncludeSource>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
 		<PackageIcon>pinball.png</PackageIcon>
 		<PackageOutputPath>.nuget</PackageOutputPath>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+		<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+		<RestoreProjectStyle>PackageReference</RestoreProjectStyle>
 	</PropertyGroup>
-
-	<ItemGroup>
-	  <PackageReference Include="NetPinProc" Version="1.0.1" />
-	</ItemGroup>
 
 	<ItemGroup>
 		<None Include="../pinball.png" Pack="true" PackagePath="\" />
 		<None Include="../README.md" Pack="true" PackagePath="\" />
 		<None Include="../LICENSE.md" Pack="true" PackagePath="\" />
-		<None Include="../.github/workflows/netpinproc.game.release-nuget.yml" Pack="true" PackagePath="\" />
+		<None Include="../.github/workflows/netpinproc.game.release-nuget.yml" />
+		<Content Include="NetPinProc.Game.targets" PackagePath="build/NetPinProc.Game.targets" />
 	</ItemGroup>
 
+	<!--<ItemGroup>
+		<Content Include="../contentFiles/lib/**/*.*">
+			--><!--<PackageCopyToOutput>true</PackageCopyToOutput>--><!--
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>-->
+
+	<ItemGroup>
+	  <PackageReference Include="NetPinProc" Version="1.0.5" />
+	</ItemGroup>
+	
 </Project>

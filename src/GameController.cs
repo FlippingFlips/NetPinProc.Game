@@ -100,9 +100,15 @@ namespace NetPinProc.Game
         /// </summary>
         protected AttrCollection<ushort, string, Switch> _switches;
 
+        /// <inheritdoc/>
+
         protected AttrCollection<ushort, string, PdStepper> _steppers;
 
+        /// <inheritdoc/>
+
         protected AttrCollection<ushort, string, PdServo> _servos;
+
+        /// <inheritdoc/>
 
         protected AttrCollection<ushort, string, PdSerialLed> _serialLeds;
 
@@ -430,18 +436,21 @@ namespace NetPinProc.Game
             set { _switches = value; }
         }
 
+        /// <inheritdoc/>
         public AttrCollection<ushort, string, PdStepper> Steppers
         {
             get { return _steppers; }
             set { _steppers = value; }
         }
 
+        /// <inheritdoc/>
         public AttrCollection<ushort, string, PdServo> Servos
         {
             get { return _servos; }
             set { _servos = value; }
         }
 
+        /// <inheritdoc/>
         public AttrCollection<ushort, string, PdSerialLed> SerialLeds
         {
             get { return _serialLeds; }

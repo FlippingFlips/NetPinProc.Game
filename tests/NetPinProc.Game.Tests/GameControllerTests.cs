@@ -43,7 +43,7 @@ namespace NetProc.Game.Tests
         {
             //load config first and pass that to the game, the game can then setup the machine
             var config = MachineConfiguration.FromFile(MACHINE_JSON);
-            var game = new TestBaseGameController(MachineType.PDB, null, true, config);
+            var game = new TestBaseGameController(MachineType.PDB, null, false, config);
             var fakeProc = (game.PROC as IFakeProcDevice);
 
             //assert
